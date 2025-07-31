@@ -10,6 +10,7 @@ export default function DashboardPage() {
   return (
     <div style={{ textAlign: "center", marginTop: 100 }}>
       <h2>Welcome, {session.user.name}</h2>
+      <p>Email: {session.user.email}</p>
       <img src={session.user.image} alt="profile" width={100} height={100} />
       <br />
       <button onClick={() => signOut()} style={{ marginTop: 20 }}>
@@ -17,4 +18,5 @@ export default function DashboardPage() {
       </button>
     </div>
   );
+
 }
