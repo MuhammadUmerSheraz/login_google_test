@@ -1,8 +1,16 @@
-export default function Home() {
+'use client';
+
+import { useEffect } from "react";
+import { signIn } from "next-auth/react";
+
+export default function LoginPage() {
+  useEffect(() => {
+    signIn("google", { callbackUrl: "/dashboard" });
+  }, []);
+
   return (
-    <main style={{ textAlign: "center", marginTop: 100 }}>
-      <h1>Welcome to Next.js Google Login App</h1>
-      <a href="/login">Go to Login</a>
-    </main>
+    <div style={{ textAlign: "center", marginTop: 100 }}>
+      <p>Redirecting to Google login...</p>
+    </div>
   );
 }
