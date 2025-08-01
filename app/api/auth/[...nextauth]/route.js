@@ -5,7 +5,7 @@ const handler = NextAuth({
   providers: [
     GoogleProvider({
       clientId: "1087715588619-3bburdqr73g1rnti5vgmk40lpl0begqu.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientSecret: "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",
     }),
   ],
   pages: {
