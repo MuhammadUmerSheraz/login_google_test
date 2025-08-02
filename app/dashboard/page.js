@@ -9,7 +9,9 @@ export default function DashboardPage() {
   useEffect(() => {
     if (status === "authenticated" && session) {
       const sessionData = JSON.stringify(session);
-      window.location.href = `http://dubaibiglottery.ae/google_login_callback?session=${sessionData}`;
+
+      const callback = localStorage.getItem('callback');
+      window.location.href = `${callback}/google_login_callback?session=${sessionData}`;
     }
   }, [status, session]);
 
